@@ -1,0 +1,222 @@
+.body {
+    background-color: cadetblue;
+}
+
+.france {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 200px;
+    width: 300px;
+    margin: 10px;
+}
+
+.fra-blue {
+background-color: #002495;
+}
+
+.fra-white {
+    background-color: #FFF;
+}  
+
+.fra-red {
+    background-color: #ED2938;
+}
+
+.germany {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    height: 200px;
+    width: 333px;
+    margin: 10px;
+}
+
+.ger-black {
+background-color: #000;
+}
+
+.ger-red {
+    background-color: #DE0002;
+}  
+
+.ger-yellow {
+    background-color: #FFCE00;
+}
+
+.madagascar {
+    display: grid;
+    grid-template-columns: 100px;
+    grid-template-rows: 1fr 1fr;
+    height: 200px;
+    width: 300px;
+    margin: 10px;
+    background-color: #FFF;
+}
+
+.mad-white {
+background-color: #FFF;
+
+}
+
+.mad-red {
+    background-color: #FC3E32;
+    grid-column: 0/1;
+}  
+
+.mad-green {
+    background-color: #007E39;
+    grid-column: 2/3;
+}
+
+.swit-white1 {
+    background-color: #FFF;
+grid-area: t;
+}
+.swit-white2 {
+    background-color: #FFF;
+grid-area: m;
+}
+.swit-white3 {
+    background-color: #FFF;
+grid-area: b;
+}
+
+
+.switzerland {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(5,1fr);
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    background-color: #FF0002;
+    grid-template-areas:
+". . . . ."
+". . t . ."
+". m m m ."
+". . b . . "
+". . . . .";
+}
+
+
+
+.sweden {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(7,1fr);
+    height: 200px;
+    width: 320px;
+    margin: 10px;
+    background-color: #0269A6;
+    grid-template-areas:
+    ". . t . . . ."
+    ". . t . . . ."
+    "m m m m m m m"
+    ". . b . . . ."
+    ". . b . . . .";
+
+}
+.swed-yellow1 {
+    background-color:#FECC00 ;
+    grid-area: t;
+}
+.swed-yellow2 {
+    background-color:#FECC00 ;
+    grid-area: m;
+}
+.swed-yellow3 {
+    background-color:#FECC00 ;
+    grid-area: b;
+}
+
+.gambia {
+    display: grid;
+    grid-template-rows: repeat(15, 1fr);
+    height: 200px;
+    width: 300px;
+    margin: 10px;
+    background-color: #FFF;
+    grid-template-areas: 
+    "t t"
+    "t t"
+    "t t"
+    "t t"
+    "t t"
+    ". ."
+    "m m"
+    "m m"
+    "m m"
+    ". ."
+    "b b"
+    "b b"
+    "b b"
+    "b b"
+    "b b"
+    ;
+}
+
+.gam-red {
+background-color: #CE1127;
+grid-area: t;
+}
+.gam-blue {
+background-color: #0D1D8B;
+grid-area: m;
+}
+
+.gam-green {
+background-color: #3B7827;
+grid-area: b;
+}
+
+.japan {
+    display: flex;
+    height: 200px;
+    width: 300px;
+    margin: 10px;
+    background-color: #FFF;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle {
+    height: 100px;
+    width: 100px;
+    background-color:#BC022C ;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.niger {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    height: 200px;
+    width: 300px;
+    margin: 10px;
+    background-color: #FFF;
+
+}
+
+.ni-orange {
+    background-color: #E15307;
+
+}
+
+.ni-green {
+    background-color: #10AF2A;
+}
+
+
+.ni-white{
+    display: flex;
+background-color: #FFF;
+align-items: center;
+justify-content: center;
+}
+
+.dot {
+    height: 50px;
+    width: 50px;
+    background-color:#E15307 ;
+    border-radius: 50%;
+    display: inline-block;
+}
