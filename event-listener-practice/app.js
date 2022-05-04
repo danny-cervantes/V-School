@@ -10,6 +10,21 @@ innerbox.style.display = "flex";
 innerbox.style.alignItems = "center";
 innerbox.style.justifyContent = "space-around";
 
+
+document.addEventListener("keydown", e => {
+    if (e.key === 'b') {
+        blue.style.backgroundColor = "blue"
+    } else if (e.key === 'r') {
+        red.style.backgroundColor = "red"
+    } else if (e.key === 'g') {
+        green.style.backgroundColor = "green"
+    } else if (e.key === 'y') {
+        yellow.style.backgroundColor = "yellow"
+    } else if (e.key === 'o') {
+        orange.style.backgroundColor = "orange"
+    }
+})
+
 var blue = document.getElementById("blue")
 blue.style.padding = "30px"
 blue.style.height = "30px"
@@ -22,7 +37,7 @@ blue.addEventListener("mouseenter", function (event) {
     }, 1000);
 }, false);
 blue.addEventListener("keydown", function (event) {
-    if (e.key == 66) {
+    if (event.key == 66) {
         blue.style.backgroundColor = "blue";
     }
 })
