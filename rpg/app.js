@@ -34,7 +34,7 @@ var owl = new Character(
 var elf = new Character(
     'Savos',
     'enemy',
-    'The dark elf that got enveloped and cursed by the dark arts',
+    'The dark elf that got consumed and cursed by the dark arts',
     100,
     true,
     ["staff of power"]
@@ -43,7 +43,7 @@ var elf = new Character(
 var ogre = new Character(
     'One Eye',
     'enemy',
-    'The mighty one eyed Ogre, leader of Banished lands',
+    'The mighty one-eyed Ogre, leader of Banished lands',
     100,
     true,
     ["mace of malice"]
@@ -52,7 +52,7 @@ var ogre = new Character(
 var grindelwald = new Character(
     'Grindelwald',
     'player',
-    'The master of disguise, the evil Grindelwald',
+    'The master of disguise, the evil banished wizard',
     100,
     true,
     ["elder wand"]
@@ -62,7 +62,7 @@ characters.push(player)
 characters.push(owl)
 characters.push(elf)
 characters.push(ogre)
-characters.push(player)
+characters.push(grindelwald)
 
 Character.prototype.printCharacterStats = function () {
     var printOut =
@@ -194,8 +194,17 @@ function attackEnemy() {
             player.isAlive = isAliveOrDead(player)
 
             console.log("\nSplendid. You have done considerable damage to your attacker.")
+            console.log("You have taken minimal damage: -" + damage + " hp")
+            console.log("But your efforts are stronger, your enemy received -" + enemyDamage + " hp")
+
+        }
+
+        if (areAllDefeated) {
+            console.log("Congradulations master sourcerer!")
             console.log("You have vanquished all foes and beat the game. You are now Headmaster of Hogwarts in Middle Earth. Or something like that...")
         }
+
+
     } else {
 
         var damage = getRandomNum(5, 10)
@@ -203,8 +212,8 @@ function attackEnemy() {
         player.health -= damage
         player.isAlive = isAliveOrDead(player)
 
-        console.log("DANGER! Your attack failed and you have taken damage :(")
-        console.log("You lost" + damage + "hp.")
+        console.log("DANGER! Your attack failed and you have taken damage!")
+        console.log("You lost " + damage + " hp.")
     }
 }
 
@@ -250,7 +259,7 @@ function enemyDies() {
         player.health += hp
     }
 
-    console.log("Congratulations, you have slained " + currentEnemy.name + "the " + currentEnemy.description + "!")
+    console.log("Congratulations, you have slained " + currentEnemy.name + " the " + ", " + currentEnemy.description + "!")
     console.log("You have recovered some health with " + hp + "hp to " + player.health + "/100")
     console.log("Over the slained corpse you find a " + currentEnemy.inventory[0] + ", which you pick up and add to your inventory.")
 
@@ -268,7 +277,7 @@ function enemyDies() {
     return false
 }
 
-function isAliveorDead(creature) {
+function isAliveOrDead(creature) {
     if (creature === player) {
         return (creature.health > 0) ? true : characterDies()
     } else {
@@ -277,8 +286,9 @@ function isAliveorDead(creature) {
 }
 
 function getRandomNum(min, max) {
-    min = Math.ceil(min)
-    max = Math.floor(max)
+    // returns a random number between min (inclusive) and max (inclusive)
+    min = Math.ceil(min);
+    max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
