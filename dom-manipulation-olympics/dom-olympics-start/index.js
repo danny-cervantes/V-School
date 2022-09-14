@@ -45,6 +45,6 @@ clear.addEventListener("click", function () {
 
 // SLIVER
 Element.classList.toggle("theme-two")
-for (let i = 0, messages.length; i++) {
+for (let i = 0; i < messages.length; i++) {
     messages[i].classList.toggle("theme-two");
 }

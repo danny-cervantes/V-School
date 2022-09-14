@@ -202,6 +202,7 @@ function attackEnemy() {
         if (areAllDefeated) {
             console.log("Congradulations master sourcerer!")
             console.log("You have vanquished all foes and beat the game. You are now Headmaster of Hogwarts in Middle Earth. Or something like that...")
+            process.exit()
         }
 
 
@@ -312,11 +313,14 @@ var enemyOptions = ["Attack", "Flee", " View my stats", "View enemy's stats"]
 while (player.health > 0) {
     var userChoice = ask.keyInSelect(options, "What is it you would like to do?")
     if (userChoice === 0) {
+
         journey()
     } else if (userChoice === 1) {
+
         console.log(player.printCharacterStats())
     } else if (userChoice === -1) {
-        console.log("Farwell.")
+
+        console.log('Farwell.')
         process.exit(1)
     }
 }

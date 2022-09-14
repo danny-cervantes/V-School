@@ -1,7 +1,7 @@
 ///////////////////////
 // Global variables //
 
-import { keyInSelect, question } from 'readline-sync'
+var ask = require('readline-sync')
 
 // Array that will hold all characters
 var characters = []
@@ -187,7 +187,7 @@ function enemyAttacks() {
     // continue this loop until the enemy is defeated, escaped or player dies
     while ((fleeSuccess === false && currentEnemy.isAlive && player.isAlive)) {
 
-        var userChoice = keyInSelect(enemyOptions, "What would you like to do? ")
+        var userChoice = ask.keyInSelect(enemyOptions, "What would you like to do? ")
 
         if (userChoice === 0) {
             // attack enemy
@@ -370,7 +370,7 @@ function getRandomBool() {
 
 // keep asking player for name until they enter one
 while (!player.name) {
-    player.name = question("\nWhat is your name? ");
+    player.name = ask.question("\nWhat is your name? ");
 }
 console.log("\nWelcome to the abyss, " + player.name + ".")
 
@@ -383,7 +383,7 @@ var enemyOptions = ["Attack", "Flee", "View my stats", "View enemy's stats"]
 /////////////
 // GAME LOOP
 while (player.health > 0) {
-    var userChoice = keyInSelect(options, "What would you like to do? ")
+    var userChoice = ask.keyInSelect(options, "What would you like to do? ")
     if (userChoice === 0) {
         // player swim
         swim()
