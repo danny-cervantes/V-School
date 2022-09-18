@@ -6,33 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple HTML Calculator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <h1>Simple HTML Calculator</h1>
 
     <form name="addition">
-        <input type="number" />
-        <div>+</div>
-        <input type="number" />
-        <button>=</button>
-        <input type="number" name="firstValue" />
+        <input type="number" name="add1" placeholder="0" />
+        <span>+</span>
+        <input type="number" name="add2" placeholder="0" />
+        <button id="addButton">=</button>
+        <div id="additionValue" class="result"></div>
     </form>
     <br>
     <form name="subtraction">
-        <input type="number" />
-        <div>-</div>
-        <input type="number" />
-        <button>=</button>
-        <input type="number" name="firstValue" />
+        <input type="number" name="sub1" placeholder="0" />
+        <span>-</span>
+        <input type="number" name="sub2" placeholder="0" />
+        <button id="subtractButton">=</button>
+        <div id="subtractionValue" class="result"></div>
     </form>
     <br>
     <form name="multiply">
-        <input type="number" />
-        <div>x</div>
-        <input type="number" />
-        <button>=</button>
-        <input type="number" name="firstValue" />
+        <input type="number" name="multiply1" placeholder="0" />
+        <span>x</span>
+        <input type="number" name="multiply2" placeholder="0" />
+        <button id="multiplyButton">=</button>
+        <div id="multiplyValue" class="result"></div>
     </form>
     <script src="app.js"></script>
 </body>
